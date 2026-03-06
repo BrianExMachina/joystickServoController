@@ -4,7 +4,7 @@
       
    Servo servoX;
 
-   int posX; // declare posX and posY outside of the "global scope" now they can be used anywhere
+   int posX; // declare posX and posY in the global scope now they can be used anywhere
    int posY;
 
    #define joyvalX A3//  connect the joyvalX wire to pin 3 to one joystick
