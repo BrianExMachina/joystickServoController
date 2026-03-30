@@ -1,0 +1,88 @@
+# 🦾 Joystick-Controlled Servo Arm
+
+A dual-axis robotic arm controlled in real time using two joysticks and an Arduino. Each joystick axis maps to a servo motor, letting you move the arm freely along the X and Y axes.
+
+https://github.com/YOUR-USERNAME/YOUR-REPO/assets/YOUR-ASSET-ID/Arm.mov
+
+> **Note:** Replace the video URL above with the actual asset URL after uploading `Arm.mov` to your GitHub repo. You can drag-and-drop the video into any GitHub issue or the README editor to get a hosted URL, then paste it here.
+
+---
+
+## 📋 How It Works
+
+Two analog joysticks send signals to the Arduino via analog pins. The Arduino reads each joystick's position (0–1023), maps that value to a servo angle (0°–180°), and writes the angle to the corresponding servo motor — all in a continuous loop with a 500ms delay between updates.
+
+| Joystick Axis | Analog Pin | Servo Pin | Controls |
+|---|---|---|---|
+| X-axis | A3 | Pin 6 | Horizontal rotation |
+| Y-axis | A2 | Pin 2 | Vertical tilt |
+
+---
+
+## 🛒 Components
+
+- Arduino (Uno or compatible)
+- 2× Servo motors
+- 2× Analog joystick modules
+- Jumper wires
+- Breadboard
+- USB cable (for power & serial monitor)
+
+---
+
+## 🔌 Wiring
+
+```
+Joystick X-axis  →  Arduino A3
+Joystick Y-axis  →  Arduino A2
+Servo X signal   →  Arduino Pin 6
+Servo Y signal   →  Arduino Pin 2
+```
+
+Both servos and joysticks share `5V` and `GND` from the Arduino.
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone this repo**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+   ```
+
+2. **Open the sketch** — Open `JoystickServoController.ino` in the [Arduino IDE](https://www.arduino.cc/en/software).
+
+3. **Install the Servo library** — Go to **Sketch → Include Library → Manage Libraries**, search for `Servo`, and install it.
+
+4. **Wire up the components** following the wiring diagram above.
+
+5. **Upload the sketch** to your Arduino and open the Serial Monitor at **9600 baud** to watch live position values.
+
+---
+
+## 💻 Code Overview
+
+```cpp
+int JoyX = analogRead(joyvalX);       // Read joystick X position (0–1023)
+posX = map(JoyX, 0, 1023, 0, 180);   // Convert to servo angle (0°–180°)
+servoX.write(posX);                   // Move servo to that angle
+```
+
+The same logic applies to the Y-axis. Serial output lets you monitor both axes in real time.
+
+---
+
+## 📁 File Structure
+
+```
+📦 joystick-servo-arm
+ ┣ 📄 JoystickServoController.ino   ← Arduino sketch
+ ┣ 📄 README.md
+ ┗ 🎥 Arm.mov                       ← Demo video
+```
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
