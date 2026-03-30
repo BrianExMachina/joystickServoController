@@ -2,7 +2,6 @@
 
 A dual-axis robotic arm controlled in real time using two joysticks and an Arduino. Each joystick axis maps to a servo motor, letting you move the arm freely along the X and Y axes.
 
-https://github.com/YOUR-USERNAME/YOUR-REPO/assets/YOUR-ASSET-ID/Arm.mov
 
 > **Note:** Replace the video URL above with the actual asset URL after uploading `Arm.mov` to your GitHub repo. You can drag-and-drop the video into any GitHub issue or the README editor to get a hosted URL, then paste it here.
 
