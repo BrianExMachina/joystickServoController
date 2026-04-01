@@ -1,6 +1,6 @@
 # 🦾 Joystick-Controlled Servo Arm
 
-A dual-axis robotic arm controlled in real time using two joysticks and an Arduino. Each joystick axis maps to a servo motor, letting you move the arm freely along the X and Y axes.
+A dual-axis robotic arm controlled in real time using two joysticks and an Arduino. Each joystick axis maps to a servo motor, letting you move the arm freely along the X and Y axes. The movement of the arm is tracked in real time on the serial monitor in the arduino IDE. 
 
 
 
